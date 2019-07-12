@@ -3,6 +3,8 @@ provider "google" {
 	# credentials = "${file("~/path/to/creds.json")}"
 }
 
+resource "null_resource" "example" {}
+
 resource "google_storage_bucket" "mybucket" {
     name          = "${var.bucket_name}"
     project       = "${var.project_id}"
